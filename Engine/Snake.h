@@ -23,12 +23,20 @@ private:
 		void Draw(Board& brd) const;
 		const Location& GetLocation() const;
 	};
-
+	//Merging practice
 private:
 	static constexpr Color headColor = Colors::Yellow;
 	static constexpr int nSegmentsMax = 100;
 	Segment segments[nSegmentsMax];
 	int nSegments = 1;
+	static const int nBodyColors = 4;
+	const Color bodyColors[nBodyColors] =
+	{
+		{ 10, 100, 32 },
+		{ 10, 130, 48 },
+		{ 18, 160, 48 },
+		{ 10, 145, 48 }
+	};
 
 public:
 	Snake(const Location& loc);

@@ -3,14 +3,7 @@
 
 Snake::Snake(const Location & loc)
 {
-	const int nBodyColors = 4;
-	const Color bodyColors[nBodyColors]=
-	{
-		{10, 100, 32},
-		{10, 130, 48},
-		{18, 160, 48},
-		{10, 145, 48}
-	};
+	
 	for (int i = 0; i < nSegmentsMax; ++i)
 	{
 		segments[i].InitBody(bodyColors[i % nBodyColors]);
