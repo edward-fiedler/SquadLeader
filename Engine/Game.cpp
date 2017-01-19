@@ -69,9 +69,9 @@ void Game::UpdateModel()
 				delta_loc = { 1, 0 };
 			}
 
-			++snakeMoveCounter;
+			snakeMoveCounter+=dt;
 			if (snakeMoveCounter >= snakeMovePeriod) {
-				snakeMoveCounter = 0;
+				snakeMoveCounter = 0.0f;
 				const Location next = snake.GetNextHeadLocation(delta_loc);
 				if (!brd.IsInsideBoard(next) ||
 					snake.IsInTileExceptEnd(next))
@@ -92,13 +92,7 @@ void Game::UpdateModel()
 					}
 				}
 			}
-			++snakeSpeedUpCounter;
-			if (snakeSpeedUpCounter >= snakeSpeedUpPeriod) 
-			{
-				snakeSpeedUpCounter = 0;
-				snakeMovePeriod = std::max(snakeMovePeriod -1, snakeMovePeriodMin);
-			}
-
+			snakeMovePeriod = std::max(snakeMovePeriod - (dt*snakeSpeedUpFactor), snakeMovePeriodMin);
 		}
 	}
 	else
