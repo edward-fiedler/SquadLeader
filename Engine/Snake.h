@@ -23,7 +23,7 @@ private:
 		void Draw(Board& brd) const;
 		const Location& GetLocation() const;
 	};
-	//Merging practice
+	
 private:
 	static constexpr Color headColor = Colors::Yellow;
 	static constexpr int nSegmentsMax = 100;
