@@ -3,8 +3,6 @@
 #include "Board.h"
 
 
-
-
 class Snake
 {
 

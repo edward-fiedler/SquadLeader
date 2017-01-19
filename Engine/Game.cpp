@@ -22,6 +22,7 @@
 #include "Game.h"
 #include "SpriteCodex.h"
 
+
 Game::Game(MainWindow& wnd)
 	:
 	rng(std::random_device()()),
@@ -43,6 +44,9 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	const float dt = ft.Mark();
+
+
 	if (gameIsStarted)
 	{
 
@@ -107,6 +111,7 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
+
 	if (gameIsStarted)
 	{
 		if (gameIsOver)
@@ -124,4 +129,5 @@ void Game::ComposeFrame()
 	{
 		SpriteCodex::DrawTitle(290,225,gfx);
 	}
+
 }

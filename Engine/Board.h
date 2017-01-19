@@ -11,6 +11,8 @@
 class Board
 {
 private:
+	static constexpr Color borderColor = Colors::Blue;
+	Graphics& gfx;
 	static const int dimension = TILE_SIZE;
 	static const int width = BOARD_WIDTH;
 	static const int height = BOARD_HEIGHT;
@@ -19,8 +21,8 @@ private:
 	static const int cellPadding = 1;
 	static const int x = 70;
 	static const int y = 50;
-	Graphics& gfx;
-	static constexpr Color borderColor = Colors::Blue;
+	
+	
 
 public:
 	Board(Graphics& gfx);

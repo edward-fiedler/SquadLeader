@@ -27,6 +27,7 @@
 #include "Snake.h"
 #include "Goal.h"
 #include <random>
+#include "FrameTimer.h"
 
 class Game
 {
@@ -47,6 +48,7 @@ private:
 	/********************************/
 	/*  User Variables              */
 	std::mt19937 rng;
+	FrameTimer ft;
 	Board brd;
 	Snake snake;
 	Location  delta_loc = {1,0};
