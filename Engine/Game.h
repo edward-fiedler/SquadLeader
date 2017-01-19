@@ -51,9 +51,12 @@ private:
 	Snake snake;
 	Location  delta_loc = {1,0};
 	Goal goal;
-	static constexpr int snakeMovePeriod = 20;
+	int snakeMovePeriod = 20;
+	static constexpr int snakeMovePeriodMin = 4;
+	int snakeSpeedUpPeriod = 180;
 	int snakeMoveCounter = 0;
+	int snakeSpeedUpCounter = 0;
 	bool gameIsOver = false;
-	
+	bool gameIsStarted = false;
 	/********************************/
 };
